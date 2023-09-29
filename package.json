@@ -9,16 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/debounce": "^1.2.2",
+    "appwrite": "^13.0.0",
+    "canvas": "^2.11.2",
+    "debounce": "^1.2.1",
+    "image-js": "^0.35.4",
+    "moment": "^2.29.4",
+    "next": "latest",
+    "raw-loader": "^4.0.2",
     "react": "latest",
+    "react-advanced-cropper": "^0.19.3",
     "react-dom": "latest",
-    "next": "latest"
+    "react-icons": "^4.11.0",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }
