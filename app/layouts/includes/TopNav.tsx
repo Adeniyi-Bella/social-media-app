@@ -4,13 +4,7 @@ import { BiSearch, BiUser } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FiLogOut } from "react-icons/fi"
-
-
-
-interface SearchBarProps {
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
-}
+import { SearchBarProps } from "@/app/types"
 
 function SearchBar({ onChange, placeholder }: SearchBarProps) {
   return (

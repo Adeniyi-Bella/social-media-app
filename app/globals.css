@@ -68,3 +68,19 @@
 .topNav-logoutMenuItem {
   @apply flex items-center justify-start w-full py-3 px-1.5 hover:bg-gray-100 border-t cursor-pointer;
 }
+
+/* SideNav styles */
+
+@layer components {
+  .side-nav-main {
+    @apply fixed z-20 bg-white pt-[70px] h-full border-r w-[75px] overflow-auto;
+  }
+
+  .side-nav-main--rootPath {
+    @apply lg:w-[310px];
+  }
+
+  .side-nav-main__content {
+    @apply lg:w-full w-[55px] mx-auto;
+  }
+}
