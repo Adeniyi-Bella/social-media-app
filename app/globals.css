@@ -87,20 +87,130 @@
   .suggested-accounts-header {
     @apply lg:block hidden text-xs text-gray-600 font-semibold pt-4 pb-2 px-2;
   }
-  
+
   .border-btm {
     @apply border-b lg:ml-2 mt-2;
   }
-  
+
   .red-text {
     @apply text-[#F02C56];
   }
-  
+
   .small-padding {
     @apply pt-1.5 pl-2;
   }
-  
+
   .small-text {
     @apply text-[13px];
+  }
+}
+
+/* upload section */
+@layer components {
+  .upload-container {
+    @apply w-full mt-[80px] mb-[40px] bg-white shadow-lg rounded-md py-6 md:px-10 px-4;
+  }
+
+  .header-text {
+    @apply text-[23px] font-semibold;
+  }
+
+  .sub-text {
+    @apply text-gray-400 mt-1;
+  }
+
+  .label-upload {
+    @apply md:mx-0 mx-auto mt-4 mb-6 flex flex-col items-center justify-center w-full max-w-[260px] h-[470px] text-center p-3 border-2 border-dashed border-gray-300 rounded-lg hover:bg-gray-100 cursor-pointer;
+  }
+
+  .instruction-text {
+    @apply mt-4 text-[17px];
+  }
+
+  .sub-instruction-text,
+  .file-limit-text {
+    @apply mt-1.5 text-gray-500 text-[13px];
+  }
+
+  .file-type-text {
+    @apply mt-12 text-gray-400 text-sm;
+  }
+
+  .file-size-text,
+  .file-duration-text {
+    @apply mt-2 text-gray-400 text-[13px];
+  }
+
+  .select-file-btn {
+    @apply px-2 py-1.5 mt-8 text-white text-[15px] w-[80%] bg-[#F02C56] rounded-sm cursor-pointer;
+  }
+
+  .preview-container {
+    @apply md:mx-0 mx-auto mt-4 md:mb-12 mb-16 flex items-center justify-center w-full max-w-[260px] h-[540px] p-3 rounded-2xl cursor-pointer relative;
+  }
+
+  .uploading-overlay {
+    @apply absolute flex items-center justify-center z-20 bg-black h-full w-full rounded-full bg-opacity-50;
+  }
+  .uploading-info {
+    @apply mx-auto flex items-center justify-center gap-1;
+  }
+  .uploading-icon {
+    @apply animate-spin text-red-700;
+  }
+  .uploading-text {
+    @apply text-white font-bold;
+  }
+  .mobile-case,
+  .tiktok-logo {
+    @apply absolute z-20 pointer-events-none;
+  }
+  .tiktok-logo {
+    @apply right-4 bottom-6;
+  }
+  .video-preview {
+    @apply absolute rounded-xl object-cover z-10 p-3 w-full h-full;
+  }
+  .file-info-container {
+    @apply absolute -bottom-12 flex items-center justify-between z-50 rounded-xl border w-full p-2 border-gray-300;
+  }
+  .file-info {
+    @apply flex items-center truncate;
+  }
+  .filename {
+    @apply text-xs pl-1 truncate;
+  }
+  .change-button {
+    @apply text-xs ml-2 font-semibold;
+  }
+  .post-section {
+    @apply mt-4 mb-6;
+  }
+  .edit-section {
+    @apply flex bg-f8f8f8 py-4 px-6;
+  }
+  .edit-button-container {
+    @apply flex justify-end max-w-[130px] w-full h-full text-center my-auto;
+  }
+  .edit-button {
+    @apply px-8 py-1.5 text-white text-15 bg-red-700 rounded-sm;
+  }
+  .caption-section {
+    @apply mt-5;
+  }
+  .text-15 {
+    @apply text-lg;
+  }
+  .text-13 {
+    @apply text-base;
+  }
+  .text-semibold {
+    @apply font-semibold;
+  }
+  .bg-f8f8f8 {
+    background-color: #f8f8f8;
+  }
+  .caption-box {
+    @apply w-full border  p-2.5  rounded-md focus:outline-none;
   }
 }
