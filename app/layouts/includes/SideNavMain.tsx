@@ -1,26 +1,26 @@
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import MenuItem from "./MenuItem";
+import MenuItems from "./sidenavbarComponents/MenuItems";
+import SuggestedAccounts from "./sidenavbarComponents/SuggestedAccounts";
+import FollowingAccounts from "./sidenavbarComponents/FollowingAccounts";
+import Footer from "./sidenavbarComponents/Footer";
 
 export default function SideNavMain() {
   const pathname = usePathname();
 
   return (
-    <>
-      <div
-        id="SideNavMain"
-        className={`side-nav-main ${pathname === "/" ? "side-nav-main--rootPath" : ""}`}
-      >
-        <div className="side-nav-main__content">
-          <Link href="/">
-            <MenuItem
-              iconString="For You"
-              colorString={pathname == "/" ? "#F02C56" : ""}
-              sizeString="25"
-            />
-          </Link>
-        </div>
+    <div
+      id="SideNavMain"
+      className={`side-nav-main ${
+        pathname === "/" ? "side-nav-main--rootPath" : ""
+      }`}
+    >
+      <div className="side-nav-main__content">
+        <MenuItems pathname={pathname} />
+        <SuggestedAccounts />
+        {true ? <FollowingAccounts /> : null}
+        <Footer />
+        <div className="pb-14"></div>
       </div>
-    </>
+    </div>
   );
 }

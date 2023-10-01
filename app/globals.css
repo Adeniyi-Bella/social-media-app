@@ -83,4 +83,24 @@
   .side-nav-main__content {
     @apply lg:w-full w-[55px] mx-auto;
   }
+
+  .suggested-accounts-header {
+    @apply lg:block hidden text-xs text-gray-600 font-semibold pt-4 pb-2 px-2;
+  }
+  
+  .border-btm {
+    @apply border-b lg:ml-2 mt-2;
+  }
+  
+  .red-text {
+    @apply text-[#F02C56];
+  }
+  
+  .small-padding {
+    @apply pt-1.5 pl-2;
+  }
+  
+  .small-text {
+    @apply text-[13px];
+  }
 }
