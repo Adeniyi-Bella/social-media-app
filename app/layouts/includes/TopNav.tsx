@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BiSearch, BiUser } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { FiLogOut } from "react-icons/fi"
-import { SearchBarProps } from "@/app/types"
+import { FiLogOut } from "react-icons/fi";
+import { SearchBarProps } from "@/app/types";
 
 function SearchBar({ onChange, placeholder }: SearchBarProps) {
   return (
@@ -15,6 +15,26 @@ function SearchBar({ onChange, placeholder }: SearchBarProps) {
         className="topNav-searchInput"
         placeholder={placeholder}
       />
+      <div className="absolute bg-white max-w-[910px] h-auto w-full z-20 left-0 top-12 border p-1">
+        {/* {searchProfiles.map((profile, index) => ( */}
+        <div className="p-1">
+          <Link
+            href={`/profile/1`}
+            className="flex items-center justify-between w-full cursor-pointer hover:bg-[#F12B56] p-1 px-2 hover:text-white"
+          >
+            <div className="flex items-center">
+              <img
+                className="rounded-md"
+                width="40"
+                src="https://placehold.co/400"
+              />
+              <div className="truncate ml-2">Bella Dev</div>
+            </div>
+          </Link>
+        </div>
+        {/* ))} */}
+      </div>
+
       <div className="topNav-searchIconContainer">
         <BiSearch color="#A1A2A7" size="22" />
       </div>
@@ -27,7 +47,10 @@ function ProfileMenu() {
     <div className="flex items-center">
       <div className="relative">
         <button className="topNav-profileBtn">
-          <img className="rounded-full w-[35px] h-[35px]" src="https://placehold.co/400" />
+          <img
+            className="rounded-full w-[35px] h-[35px]"
+            src="https://placehold.co/400"
+          />
         </button>
         <div className="topNav-profileMenu">
           <button className="topNav-profileMenuItem">
@@ -48,7 +71,9 @@ function LoginButton() {
   return (
     <div className="flex items-center">
       <button className="topNav-loginBtn">
-        <span className="whitespace-nowrap mx-4 font-medium text-[15px]">Log in</span>
+        <span className="whitespace-nowrap mx-4 font-medium text-[15px]">
+          Log in
+        </span>
       </button>
       <BsThreeDotsVertical color="#161724" size="25" />
     </div>
@@ -69,7 +94,11 @@ export default function TopNav() {
 
   return (
     <div id="TopNav" className="topNav-container">
-      <div className={`topNav-innerContainer ${pathname === "/" ? "topNav-innerContainer-rootPath" : ""}`}>
+      <div
+        className={`topNav-innerContainer ${
+          pathname === "/" ? "topNav-innerContainer-rootPath" : ""
+        }`}
+      >
         <Link href="/">
           <img className="topNav-logo" src="/images/tiktok-logo.png" />
         </Link>
