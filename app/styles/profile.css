@@ -1,0 +1,42 @@
+
+.profile-container {
+    @apply pt-[90px] ml-[90px] 2xl:pl-[185px] lg:pl-[160px] lg:pr-0 w-[calc(100%-90px)] pr-3 max-w-[1800px] 2xl:mx-auto;
+}
+
+.image-container {
+    @apply w-[120px] min-w-[120px] rounded-full;
+}
+
+.placeholder-image {
+    @apply min-w-[150px] h-[120px] bg-gray-200 rounded-full;
+}
+
+.edit-profile-button {
+    @apply flex items-center rounded-md py-1.5 px-3.5 mt-3 text-[15px] font-semibold border hover:bg-gray-100;
+}
+
+.follow-button {
+    @apply flex items-center rounded-md py-1.5 px-8 mt-3 text-[15px] text-white font-semibold bg-[#F02C56];
+}
+.stats {
+    @apply font-bold;
+}
+.stats-description {
+    @apply text-gray-500 font-light text-[15px] pl-1.5;
+}
+
+.bio {
+    @apply pt-4 mr-4 text-gray-500 font-light text-[15px] pl-1.5 max-w-[500px];
+}
+
+.nav-item {
+    @apply w-60 text-center py-2 text-[17px] font-semibold;
+}
+
+.nav-item-active {
+    @apply border-b-2 border-b-black;
+}
+
+.grid-posts {
+    @apply mt-4 grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-3;
+}
