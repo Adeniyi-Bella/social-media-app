@@ -1,18 +1,22 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import AuthOverlay from "./components/AuthOverlay";
+import "./globals.css";
+import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: 'Tiktok Clone',
-  description: 'A tiktok clone application',
-}
+  title: "Tiktok Clone",
+  description: "A tiktok clone application",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AuthOverlay />
+        {children}
+      </body>
     </html>
-  )
+  );
 }
