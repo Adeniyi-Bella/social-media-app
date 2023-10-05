@@ -6,6 +6,7 @@ import ClientOnly from "@/app/components/ClientOnly";
 import { BsPencil } from "react-icons/bs";
 import { useEffect } from "react";
 import PostUser from "@/app/components/profile/PostUser";
+import EditProfileOverlay from "@/app/components/profile/EditProfileOverlay";
 
 export default function Profile({ params }: ProfilePageTypes) {
   const currentProfile = {
@@ -19,6 +20,9 @@ export default function Profile({ params }: ProfilePageTypes) {
   return (
     <>
       <MainLayout>
+        <ClientOnly>
+          <EditProfileOverlay />
+        </ClientOnly>
         <div className="profile-container">
           <div className="flex w-[calc(100vw-230px)]">
             <ClientOnly>
@@ -72,12 +76,8 @@ export default function Profile({ params }: ProfilePageTypes) {
           </ClientOnly>
 
           <ul className="w-full flex items-center pt-4 border-b">
-            <li className="nav-item nav-item-active">
-              Videos
-            </li>
-            <li className="nav-item text-gray-500">
-              Liked
-            </li>
+            <li className="nav-item nav-item-active">Videos</li>
+            <li className="nav-item text-gray-500">Liked</li>
           </ul>
 
           <ClientOnly>
