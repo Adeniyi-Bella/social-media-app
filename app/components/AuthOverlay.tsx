@@ -1,13 +1,11 @@
-"use client"
-
 import { AiOutlineClose } from "react-icons/ai";
-// import { useGeneralStore } from"@/app/stores/general"
+import { useGeneralStore } from "@/app/stores/general";
 import Login from "@/app/components/auth/Login";
 import Register from "@/app/components/auth/Register";
 import { useState } from "react";
 
 export default function AuthOverlay() {
-  // let { setIsLoginOpen } = useGeneralStore()
+  let { setIsLoginOpen } = useGeneralStore();
 
   let [isRegister, setIsRegister] = useState<boolean>(false);
 
@@ -20,7 +18,7 @@ export default function AuthOverlay() {
         <div className="relative bg-white w-full max-w-[470px] h-[70%] p-4 rounded-lg">
           <div className="w-full flex justify-end">
             <button
-            //   onClick={() => setIsLoginOpen(false)}
+              onClick={() => setIsLoginOpen(false)}
               className="p-1.5 rounded-full bg-gray-100"
             >
               <AiOutlineClose size="26" />

@@ -2,14 +2,14 @@
 import TextInput from "../TextInput";
 import { useState } from "react";
 import { ShowErrorObject } from "@/app/types";
-// import { useUser } from "@/app/context/user";
+import { useUser } from "@/app/context/user";
 import { BiLoaderCircle } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 
 export default function Register() {
     // let { setIsLoginOpen } = useGeneralStore();
 
-    // const contextUser = useUser()
+    const contextUser = useUser()
     const router = useRouter()
 
     const [loading, setLoading] = useState<boolean>(false);
@@ -54,23 +54,23 @@ export default function Register() {
         return isError
     }
 
-    // const register = async () => {
-    //     let isError = validate()
-    //     if (isError) return
-    //     if (!contextUser) return
+    const register = async () => {
+        let isError = validate()
+        if (isError) return
+        if (!contextUser) return
 
-    //     try {
-    //         setLoading(true)
-    //         await contextUser.register(name, email, password)
-    //         setLoading(false)
-    //         setIsLoginOpen(false)
-    //         router.refresh()
-    //     } catch (error) {
-    //         console.log(error)
-    //         setLoading(false)
-    //         alert(error)
-    //     }
-    // }
+        try {
+            setLoading(true)
+            await contextUser.register(name, email, password)
+            setLoading(false)
+            // setIsLoginOpen(false)
+            router.refresh()
+        } catch (error) {
+            console.log(error)
+            setLoading(false)
+            alert(error)
+        }
+    }
 
     return (
         <>
@@ -124,7 +124,7 @@ export default function Register() {
                 <div className="px-6 pb-2 mt-6">
                     <button 
                         disabled={loading}
-                        // onClick={() => register()} 
+                        onClick={() => register()} 
                         className={`
                             flex items-center justify-center w-full text-[17px] font-semibold text-white py-3 rounded-sm
                             ${(!name || !email || !password || !confirmPassword) ? 'bg-gray-200' : 'bg-[#F02C56]'}
